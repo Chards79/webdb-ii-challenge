@@ -11,6 +11,8 @@ const db = knex({
 
 const router = express.Router();
 
+router.use(express.json());
+
 // POST
 
 router.post('/', (req, res) => {

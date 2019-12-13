@@ -10,6 +10,7 @@ const db = require('../data/dbConfig');
 server.use(helmet());
 server.use(express.json());
 
-server.use('/api/cars', db, carsRouter);
+server.use('/api/cars', carsRouter);
+server.use('/api/cars', db);
 
 module.exports = server;

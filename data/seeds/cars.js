@@ -1,13 +1,11 @@
 
-exports.seed = function(knex) {
+exports.seed = function (knex) {
   // Deletes ALL existing entries
-  return knex('table_name').del()
+  return knex('cars').del()
     .then(function () {
       // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
+      return knex('cars').insert([
+        { vin: '3515166165', make: 'GMC', model: 'Envoy', mileage: 103000, transmissionType: 'standard', titleStatus: 'clear' },
       ]);
     });
 };
